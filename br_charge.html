@@ -1,0 +1,875 @@
+
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+     <style type="text/css">
+      body {
+        margin: 0;
+        font-family: "HelveticaNeueLTProBold", "HelveticaNeue-CondensedBold", Helvetica, sans-serif;
+      }
+      
+      #content_holder {
+        width: 800px;
+        height: 600px;
+        position: absolute;
+   
+      }
+
+      .registrationScreen {
+        margin: 25px 55px;
+      }
+
+      #regHeadline {
+        display: block;
+        top: auto;
+        width: 95%;
+        margin-top: 28px;
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+
+      #regHeadline h1 {
+        font-size: 38px;
+        margin: 0px 0px 0px;
+        color: rgb(65,64,66);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 45px;
+      }
+
+
+      #content_holder .span2 {
+        width: 12%;
+      }
+
+      #content_holder .span3 {
+        width: 28.07%;
+      }
+
+      #content_holder .span4 {
+        width: 40%;
+      }
+
+      #content_holder .span5 {
+        width: 5%;
+      }
+
+      #content_holder .span6 {
+        width: 10%;
+      }
+
+      #content_holder .span10 {
+        width: 101.8%;
+      }
+
+
+
+
+      /*======= NUMBER SCALE QUESTION ======= */
+
+      .reg-form-group {
+        width: 100%;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        margin: 65px 0px 0px;
+      }
+
+
+      #content_holder .reg-form-group .span1 p {  
+        color: rgb(37,168,255);
+        font-size: 34px;
+        margin-top: 17px;
+        -webkit-transition: all ease 0.3s; 
+      }
+
+      #content_holder .reg-form-group .span1 {
+        width: 65px;
+        height: 65px;
+        background: none;
+        border: 3px solid rgb(65,64,66);
+        -moz-border-radius: 85px;
+        -webkit-border-radius: 85px;
+        border-radius: 85px;
+        -webkit-transition: all ease 0.3s; 
+      }
+
+      .reg-form-group .connect-line {
+        height: 1px;
+        border: 1px solid rgb(65,64,66);
+        width: 65px;
+        background-color: rgb(65,64,66);
+        padding: 0px;
+        -webkit-backface-visibility: hidden;
+      }
+
+      .chosen-option {
+        background: rgb(37,168,255) !important;
+        -webkit-transition: all ease .3s; 
+      }
+
+      .chosen-option p {
+        color: rgb(242, 242,244) !important;
+        -webkit-transition: all ease .3s; 
+      }
+
+
+
+      /*======= YES/NO QUESTION ======= */
+
+      #content_holder .reg-form-group .span2:not([class*="empty"]) {
+        width: 150px;
+        height: 150px;
+        background: none;
+        border: 3px solid rgb(65,64,66);
+        -moz-border-radius: 160px;
+        -webkit-border-radius: 160px;
+        border-radius: 160px;
+        -webkit-transition: all ease 0.3s; 
+        margin-top: -22px;
+      }
+
+      #content_holder .reg-form-group .span2  p {
+        color: rgb(37,168,255);
+        font-size: 32px;
+        margin-top: 60px;
+        text-transform: uppercase;
+      }
+
+
+
+
+      /*======= MULTIPLE CHOICE QUESTION ======= */
+
+
+      #content_holder .reg-form-multiple {
+        width: 100%;
+        margin: 0px 0px;
+        margin: 65px 0px 0px;
+      }
+
+      #content_holder .gap {
+        margin: 110px 0px 0px;
+      }
+
+      #content_holder .reg-form-multiple .option.chosen-option {
+        background: inherit !important;;
+        -webkit-transition: none;
+      }
+
+      #content_holder .reg-form-multiple .option.chosen-option div[class^="span"] {
+        background: rgb(37,168,255) !important;
+        -webkit-transition: all ease .3s; 
+      }
+
+      #content_holder .reg-form-multiple .option {
+        overflow: auto;
+        width: 190px;
+        float: left;
+        padding: 0px 40px 55px 0px;
+        margin-top: -25px;
+      }
+
+    #content_holder .reg-form-multiple .reg-form-option {
+        font-size: 26px;
+        color: rgb(65,64,66);
+        margin-left: 66px;
+        margin-top: 6px;
+      }
+
+      #content_holder .reg-form-multiple .option:nth-child(3n) {
+        padding-right: 0px;
+      }
+
+      #content_holder .reg-form-multiple .option .span5 {
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: 3px solid rgb(65,64,66);
+        -moz-border-radius: 85px;
+        -webkit-border-radius: 85px;
+        border-radius: 85px;
+        -webkit-transition: all ease 0.3s; 
+        float: left;
+
+      }
+
+      #content_holder .reg-form-multiple .option .reg-form-title {
+        float: left;
+        width: 80px;
+        padding: 0px 0px 0 20px; 
+
+      }
+
+
+
+      /*======= MULTIPLE ANSWER QUESTION ======= */
+
+      #content_holder .reg-form-multiple .choice {
+        overflow: auto;
+        width: 150px;
+        float: left;
+        padding: 0px 60px 40px 0px;
+        margin-top: -10px;
+      }
+
+      #content_holder .reg-form-multiple .choice:nth-child(3n) {
+        padding-right: 0px;
+      }
+
+      #content_holder .reg-form-multiple .choice .span6 {
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: 3px solid rgb(65,64,66);
+        -moz-border-radius: 85px;
+        -webkit-border-radius: 85px;
+        border-radius: 85px;
+        -webkit-transition: all ease 0.3s; 
+        float: left;
+
+      }
+
+      #content_holder .reg-form-multiple .choice .reg-form-title {
+        float: left;
+        width: 150px;
+        font-size: 24px;
+        padding: 0px 0px 0 20px; 
+
+      }
+
+      #content_holder .reg-form-multiple .subtitle {
+        font-size: 16px;
+        opacity: 0.8;
+        left: 94px;
+        color: rgb(153,152,154);
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        left: 263px;
+
+      }
+
+
+      /*======= FACES ======= */
+
+      #content_holder .reg-form-group .span6:not([class*="empty"]) {
+        width: 130px;
+        height: 130px;
+        background: none;
+        border: 3px solid rgb(65,64,66);
+        -moz-border-radius: 130px;
+        -webkit-border-radius: 130px;
+        border-radius: 130px;
+        -webkit-transition: all ease 0.3s; 
+        margin-top: -32px;
+      }
+
+
+      #content_holder .reg-form-group .span6 .features {
+        margin-top: 50px;
+        margin-left: 23px;
+        float: center;
+      }
+
+      #content_holder .reg-form-group .span6 .features .eye {
+        width: 13px;
+        height: 13px;
+        background: rgb(65,64,66);
+        -moz-border-radius: 13px;
+        -webkit-border-radius: 13px;
+        border-radius: 13px;
+        float: left;
+        margin: 0px 14px;
+      }
+
+      #content_holder .reg-form-group .span6 .features #positive {
+        width: 50px;
+        height: 20px;
+        border: 3.5px solid rgb(65,64,66);
+        border-top: 0;
+        background: rgba(0,0,0,0);
+        border-radius: 0 0 100px 100px / 0 0 80px 80px;
+        margin-left: 14px;
+        position: absolute;
+        top: 52px;
+      }
+
+
+      #content_holder .reg-form-group .span6 .features #neutral {
+        width: 50px;
+        height: 0;
+        border: 3.5px solid rgb(65,64,66);
+        border-top: 0;
+        background: rgba(0,0,0,0);
+        margin-left: 14px;
+        position: absolute;
+        top: 62px;
+      }
+
+      #content_holder .reg-form-group .span6 .features #negative {
+        width: 50px;
+        height: 20px;
+        border: 3.5px solid rgb(65,64,66);
+        border-bottom: 0;
+        background: rgba(0,0,0,0);
+        border-radius: 100px 100px 0 0  /80px 80px 0 0 ;
+        margin-left: 14px;
+        position: absolute;
+        top: 52px;
+      }
+
+      #content_holder .reg-form-group .span6 .subtext {
+        margin-top: 150px;
+      }
+
+
+
+      /*======= BUTTONS ======= */
+
+      .registrationScreen #regForm form .btn_phone_select_submit,
+      .registrationScreen #regForm form .btn_registration_cancel {
+        color: white;
+        margin-top: 15px;
+        font-size: 23px;
+        letter-spacing: 0.5px;
+        justify-content: center;
+        align-items: center;
+        display: -webkit-flex;
+        border-radius: 8px;
+        text-transform: uppercase;
+      }
+
+
+      #next {
+        padding: 29px 80px 23px 80px;
+        overflow: hidden;
+      }
+
+     #skip {
+        padding: 29px 80px 23px 80px;
+        overflow: hidden;
+      }
+
+
+      .registrationScreen #regForm form .btn_phone_select_submit {
+        padding: 0px 18px;
+        float: right;
+        background-color: rgb(37,168,255);
+        -webkit-transition: all ease 0.1s; 
+      }
+
+/*      .registrationScreen #regForm form .btn_phone_select_submit:hover {
+        background-color: rgb(33,150,228);
+        -webkit-transition: all ease 0.1s; 
+      }*/
+
+
+      .registrationScreen #regForm form .btn_registration_cancel {
+        padding: 0px 18px;
+        float: left;
+        background-color: rgb(153,152,154);
+        -webkit-transition: all ease 0.1s; 
+      }
+
+      /*.registrationScreen #regForm form .btn_registration_cancel:hover {
+        background-color: rgb(137,137,137);
+        -webkit-transition: all ease 0.1s; 
+      }*/
+
+
+
+      #regForm {
+        margin-top: 20px;
+        color: hsl(0, 0%, 66%);
+        margin: 0px 14px;
+      }
+
+      #content_holder .reg-form-group p {
+        text-align: center;
+        font-size: 35px;
+      }
+
+
+      span#background_screen {
+        width: 800px;
+        height: 600px;
+        background-color: rgba(1,1,1,0.8);
+        display: none;
+        z-index: 10000;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+       {
+        outline: none;
+      }
+
+      .subtext {
+        background-color: transparent;
+        color: rgb(65,64,66);
+        font-size: 18px;
+        text-align: center;
+        margin-top: -10px;
+      }
+
+      .word {
+        margin-top: 82px;
+      }
+
+
+      #content_holder .reg-form-title .span1 {
+        width: 20%;
+      }
+
+      #content_holder .reg-form-title .span1.empty {
+        padding: 0px 0px;
+      }
+
+      #content_holder .registrationScreen .hide {
+        display: none !important;
+      }
+
+
+      #content_holder form {
+        position: relative;
+      }
+
+      #content_holder .end-div {
+        position: absolute;
+        top: 165px;
+        left: -6px;
+      }
+
+      #content_holder .question-indicators {
+        width: 100%;
+        margin-left: 3px;
+        margin-top: 30px;
+      }
+
+      #content_holder .question-indicators .span3 {
+        background-color: rgb(173,172,175);
+        background: linear-gradient(to left, rgb(173,172,175) 50%, rgb(37,168,255) 50%);
+        background-size: 200% 100%;
+        padding: 2.2px 0px;
+        display: inline-block;
+        background-position:right bottom;
+        width: 31%;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 2px;
+        position: relative;
+        -webkit-transition: all ease 1s; 
+      }
+
+      #content_holder .question-indicators .span3.active {
+        background-position:left bottom;
+      /*  background-color: rgb(37,168,255);*/
+        -webkit-transition: all ease 1s; 
+      }
+
+
+      #content_holder .question-indicators .span3 span {
+        position: absolute;
+        top: -20px;
+        font-size: 13px;
+        left: 74px;
+        color: rgb(153,152,154);
+        text-transform: uppercase;
+      }
+
+
+      /*======= EMAIL ======= */
+
+
+      #content_holder .reg-form-email {
+        width: 100%;
+        float:center;
+        margin: 0px 0px;
+        margin: 65px 0px 0px;
+      }
+
+      #subheader {
+        margin-top: 10px;
+        font-size: 28px;
+        text-align: center;
+        color: rgb(37,168,255);
+      }
+
+      #content_holder input {
+        border: solid 3px rgb(213,212,214);
+        font-size: 24px;
+        font-family: "HelveticaNeue";
+      }
+
+
+      #content_holder .reg-form-email input {
+        width: 100%;
+        height: 100px;
+      }
+
+
+      #content_holder ::-webkit-input-placeholder {
+        opacity: .5;
+      }
+
+
+      /*======= SALES LEAD ======= */
+
+
+      #content_holder .reg-form-sales {
+        width: 100%;
+        float:center;
+        margin: 0px 0px;
+        margin: 65px 0px 0px;
+        float: center;
+      }
+
+
+      .reg-form-sales #name-form, 
+      .reg-form-sales #email-form {
+        width: 48%;
+        float: left;
+ /*       overflow: auto;*/
+        padding-bottom: 10px;
+        margin-top: -30px;
+      }
+
+      .reg-form-sales #company-form {
+         margin-bottom: 25px;
+      }
+
+      .reg-form-sales #name-form {
+        padding-right: 4%;
+      }
+
+      .reg-form-sales #name-form input,
+      .reg-form-sales #email-form input {
+        height: 60px;
+        width: 99%;
+      }
+
+      .reg-form-sales #company-form input {
+        width: 100%;
+        height: 60px;
+      }
+
+      .fill {
+        text-align: left;
+        padding-bottom: 7px;
+        padding-left: 3px; 
+      }
+
+
+      #footer-bar {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 800px;
+        height: 60px;
+        background-color: rgb(153,152,154);
+      }
+
+      #footer-bar img {
+        position: absolute;
+        bottom: 5px;
+        left: 0px;
+        width: 800px;
+        height: 60px;
+        background-color: rgb(153,152,154);
+      }
+
+      #content_holder .ui-keyboard-space {
+        width: 7em;
+      }
+      #content_holder .ui-widget input, #content_holder .ui-widget select, #content_holder .ui-widget textarea, #content_holder .ui-widget button {
+        font-size: 0.85em;
+      }
+
+      .registrationScreen form .textline input[type="text"] {
+        height: 45px;
+        text-indent: 20px;
+        padding-right: 0px;
+        color: hsl(0, 0%, 0%);
+        border-radius: 0px;
+        font-size: 14px;
+        background-color: white;
+      }
+      #content_holder .ui-keyboard-has-focus {
+        z-index: 16001;
+        background-color: rgb(160, 170, 175);
+      }
+
+
+
+      
+    </style>
+  </head>
+  
+  <body>
+    <div id="content_holder">
+      <span id="background_screen"></span>
+      <div class="registrationScreen">  
+        <div class="span10"></div>
+        <div class="question-indicators">
+          <div class="span3 active"><span data-id="0">pergunta 1</span></div>
+          <div class="span3" data-indi="1"><span data-id="1" class="hide">pergunta 2</span></div>
+          <div class="span3" data-indi="2"><span data-id="2" class="hide">pergunta 3</span></div>
+        </div>
+        <div id="regHeadline">
+          <h1 data-id="0">Qual a sua idade?</h1>
+          <h1 data-id="1" class="hide">Qual é a sua operadora?</h1>
+          <h1 data-id="2" class="hide"> Para a sua segurança, qual é o seu e-mail?</h1>
+        </div>
+        <div id="regForm"> 
+          <form accept-charset="UTF-8" action="/regform" class="reg-form" method="post" name="reg-form">     
+         
+          <!-- ======= MULTIPLE CHOICE QUESTION ======= -->
+
+            <div data-id="0" >
+              <div class="reg-form-multiple  clickable gap">
+                
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">Até 20 anos</div>
+                </div> 
+                
+                <div class="option">
+                  <div class="span5 "></div><div class="reg-form-option">20-30</div> 
+                </div>
+                
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">30-40</div>
+                </div> 
+                
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">40-50</div>
+                </div> 
+                
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">50+</div>
+                </div> 
+                
+              </div>      
+            </div>   
+         <!-- ======= MULTIPLE ANSWER QUESTION ======= -->
+
+           <div data-id="1" class="hide">
+              <div class="reg-form-multiple clickable gap">
+                
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">Claro</div>
+                </div> 
+                
+                <div class="option">
+                  <div class="span5 "></div><div class="reg-form-option">Nextel</div> 
+                </div>
+                
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">Oi</div>
+                </div>
+
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">Porto Seguro Conecta</div>
+                </div>
+                
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">TIM</div>
+                </div>
+
+                <div class="option">
+                  <div class="span5"></div><div class="reg-form-option">Vivo</div>
+                </div>
+
+                <div style="clear:both"></div>
+
+                <!-- <div class="subtitle">(Select all that apply)</div> -->
+
+                
+                
+              </div>      
+            </div>
+            
+
+
+          <!-- ======= EMAIL ======= -->
+
+            <div class="hide" data-id="2">
+              <div class="reg-form-email">
+                <div>
+                  <input type="text" name="keyboard_email" placeholder="Digite o seu email" class="focus">
+                </div>
+              </div>
+            </div>
+
+         
+
+
+            <!-- ======= BUTTONS ======= -->
+
+            <div class="span10 end-div">
+              <div class="btn_registration_cancel span4"><div id="skip">cancelar</div></div>
+              <div class="btn_phone_select_submit span4"><div data-id="0" id="next">PRÓXIMO</div></div>
+            </div>
+          </form>
+        <div id="footer-bar">
+          
+        </div>
+      </div>
+    
+
+
+
+    <script type="text/javascript">
+      if (!window.jQuery) {
+        var jq = document.createElement('script'); 
+        jq.type = 'text/javascript';
+        // Path to jquery.js file, eg. Google hosted version
+        jq.src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js";
+        document.getElementsByTagName('head')[0].appendChild(jq);
+        var checkExist = setInterval(function() {
+          if (window.jQuery) {
+            append_elements_to_page();
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+      else {
+        append_elements_to_page();
+      }
+      function append_elements_to_page() {
+        $(function() {
+        var $final = {};
+        
+        $('.clickable').children().not('.connect-line, .reg-form-title').on('click', function(e) {
+          e.preventDefault();
+          $('.clickable').children().not('.connect-line, .reg-form-title').removeClass('chosen-option');
+          $(this).addClass('chosen-option');
+        });
+
+
+        $('.clickable_several').children().not('.reg-form-title').on('click', function(e) {
+          e.preventDefault();
+          if ($(this).hasClass('chosen-option')) {
+            $(this).removeClass('chosen-option');
+          }
+          else {
+            $(this).addClass('chosen-option');
+            $('.none').removeClass('chosen-option');
+          }
+          if ($(this).hasClass('none')) {
+            $('.clickable_several').children().removeClass('chosen-option');
+            $(this).addClass('chosen-option');
+          }
+        });
+        
+        $('#next').on('click', function(e) {
+          e.preventDefault();
+          var id = parseInt($(this).attr('data-id'));
+          var newId = id + 1;
+          
+          var arr, input;
+          input = $('[data-id=' + id.toString() + '] input');
+          if (input == null || input.length === 0) {
+            input = $('[data-id=' + id.toString() + '] .chosen-option');
+          }
+          arr = [];
+          $final[id] = (function() {
+            switch (input.attr('type')) {
+              case "text":
+              case "email":
+              case "number":
+              case "date":
+              case "datetime-local":
+              case "tel":
+              case "time":
+              case "month":
+              case "week":
+              case "range":
+                input.each(function() {
+                  return arr.push($(this).val());
+                });
+                return arr.join();
+              case "select":
+              case "radio":
+                return $('[data-id=' + id.toString() + "] .chosen-option").text().trim();
+              case "checkbox":
+                $('[data-id=' + id.toString() + '] input[type="checkbox"]:checked').each(function() {
+                  return arr.push($(this).text().trim());
+                });
+                return arr.join();
+              default:
+                return input.text().trim();
+            }
+          })();
+          $('#skip').html = "SKIP"
+          if ($('[data-id='+newId.toString()+"]").length ) {
+            this.dataset.id = newId
+            if ($('[data-id='+(newId+1).toString()+"]").length === 0) {
+              $(this).html("ENVIAR");
+            }
+            $('[data-indi='+newId.toString()+"]").addClass('active');
+            $('[data-id='+id.toString()+"]").hide();
+            $('[data-id='+newId.toString()+"]").hide().removeClass('hide').fadeIn(1100);
+          }
+          else {
+            form = $('[name="reg-form"]');
+            $.post(form.prop('action'), JSON.stringify($final),'JSON').success( function(response) {if(response.status == 'success') { goToScreen(settings.registration.screen);
+              }
+            });
+          }
+        });
+        $('#skip').on('click', function(e) {
+          if ($final.length){
+            form = $('[name="reg-form"]');
+            $.post(form.prop('action'), JSON.stringify($final),'JSON').success( function(response) {if(response.status == 'success') { goToScreen(settings.registration.screen);
+              }
+            });
+          } else {
+            goToScreen(settings.registration.screen);
+          }
+        });
+        $('.registrationScreen').css('background-size', '800px 600px');
+        $('#content_holder').css('background', '-webkit-linear-gradient(top, hsl(240, 4%, 87%), hsl(288, 6%, 90%), hsl(240, 4%, 87%), hsl(288, 6%, 90%))');
+
+    function initNewEmailKeyboard() {
+        var txtElement = $('#registration_form [name*="keyboard_"]');
+        txtElement.keyboard($.extend({}, default_keyboard_settings, {
+        usePreview: true,
+        appendLocally : true,
+        display: { 'bksp'   : '\u2190', 'default': 'ABC', 'meta1'  : '.?123', 'meta2'  : '#+=' },
+        layout: 'custom',
+        customLayout: {
+            'default': [ 'q w e r t y u i o p {bksp}', 'a s d f g h j k l', '{s} z x c v b n m @ . {s}', '{cancel} {meta1} {space} _ - {accept}' ],
+            'shift': [ 'Q W E R T Y U I O P {bksp}', 'A S D F G H J K L', '{s} Z X C V B N M @ . {s}', '{cancel} {meta1} {space} _ - {accept}' ],
+            'meta1': [ '1 2 3 4 5 6 7 8 9 0 {bksp}', '` | { } % ^ * / \'', '{meta2} $ & ~ # = + . {meta2}','{cancel} {default} {space} ! ? {accept}'],
+            'meta2': [ '[ ] { } \u2039 \u203a ^ * " , {bksp}', '\\ | / < > $ \u00a3 \u00a5 \u2022', '{meta1} \u20ac & ~ # = + . {meta1}', '{cancel} {default} {sp:3} ! ? {accept}']
+          },
+        position : { of: $('#registration_form'), my: 'center top', at: 'center top', offset: "0 150" },
+        canceled    : function(e, keyboard, el) { keyboard.close();},
+        beforeVisible: function(e, keyboard, el) { $('#background_screen').show(); },
+        beforeClose : function(e, keyboard, el) { $('#background_screen').hide(); },
+        visible     : function(e, keyboard, el) { $('#registration_form .textline .ui-keyboard-preview-wrapper input[type="text"] ').css('font-size','30px'); },
+        closing     : function(e, keyboard, el) { $(keyboard).css('background-color', 'auto');  },
+        //wifi pw must be between 8 and 26 chars
+        accepted: function(e,keyboard,el) {},
+        validate    : function(keyboard, value, isClosing) {
+            var valid = value !== '';
+            return valid;
+         },
+        acceptValid: true
+      }));
+      }
+      initNewEmailKeyboard();
+      });
+    }
+    </script>
+    </div>
+    </div>
+  </body>
+</html>
